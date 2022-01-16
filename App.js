@@ -7,6 +7,7 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
+import 'react-native-gesture-handler'
 import LinearGradient from 'react-native-linear-gradient'
 import Screen1 from './Components/HowToPlay/Screen1';
 import Screen2 from './Components/HowToPlay/Screen2';
@@ -17,29 +18,38 @@ import Page1 from './Components/Page1';
 import RegisterPage from './Components/RegisterPage';
 import SplashScreen from './Components/SplashScreen';
 import WinningScreen from './Components/WinningScreen';
+import { NavigationContainer, StackActions } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
 
 
 
-const App = () => {
-
+const App = (props) => {
+  const Stack=createStackNavigator();
   return (
     <View style={{ flex: 1 }}>
       {/* <Drawer /> */}
-      {/* <LinearGradient
-        colors={['#0A2133', '#4cd4ca']} style={{ flex: 1, alignItems: 'center', flexDirection: 'row', justifyContent: 'center' }}> */}
+      <NavigationContainer>
+      <LinearGradient
+        colors={['#0A2133', '#4cd4ca']} style={{ flex: 1, alignItems: 'center', flexDirection: 'row', justifyContent: 'center' }}>
+        <Stack.Navigator initialRouteName='Screen1'>
+          <Stack.Screen name='Screen1' component={Screen1} />
+          <Stack.Screen name='Screen2' component={Screen2} />
+        </Stack.Navigator>
 
       {/* <Screen1 /> */}
+      {/* <Button title='Go to How to Play Screens' onPress={()=>{props.navigator.navigate}} /> */}
       {/* <Screen2 /> */}
       {/* <Screen3 /> */}
       {/* <Screen4 /> */}
       {/* <SplashScreen /> */}
       {/* <Page1 /> */}
-      {/* </LinearGradient> */}
+      </LinearGradient>
       {/* <Screen5 /> */}
       {/* <RegisterPage/> */}
         
-     <WinningScreen />
+     {/* <WinningScreen /> */}
+     </NavigationContainer>
        
 
     </View>
@@ -100,3 +110,5 @@ const styles = StyleSheet.create({
 });
 
 export default App;
+
+// hello himanshu

@@ -7,7 +7,7 @@ import {
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient'
 
-const Screen1 = () => {
+const Screen1 = ({navigation}) => {
   return (
     <View style={{ flex: 1 }}>
 

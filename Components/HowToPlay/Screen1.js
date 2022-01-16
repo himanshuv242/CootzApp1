@@ -3,12 +3,14 @@ import {
   ImageBackground,
   Text,
   useColorScheme,
+  ScrollView,
   View,
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient'
 
-const Screen1 = () => {
+const Screen1 = (props) => {
   return (
+    // <ScrollView>
     <View style={{ flex: 1 }}>
 
       <View style={{ flex: 1.3, alignItems: 'center', justifyContent: 'center' }}>
@@ -24,7 +26,11 @@ const Screen1 = () => {
       <View style={{ flex: 1, }}>
         <Text style={{ fontSize: 100, color: 'white', textAlign: 'center' }}>.</Text>
       </View>
+      <View style={{ flex: 0.5, }}>
+        <Text onPress={()=>props.navigation.navigate('Screen2')} style={{ fontSize: 20, color: 'black', textAlign: 'center' }}>Next</Text>
+      </View>
     </View>
+    // </ScrollView>
   )
 }
 
