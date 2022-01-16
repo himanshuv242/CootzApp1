@@ -33,13 +33,13 @@ const App = () => {
       {/* <Screen2 /> */}
       {/* <Screen3 /> */}
       {/* <Screen4 /> */}
-      {/* <SplashScreen /> */}
+      <SplashScreen />
       {/* <Page1 /> */}
       {/* </LinearGradient> */}
       {/* <Screen5 /> */}
       {/* <RegisterPage/> */}
         
-     <WinningScreen />
+     {/* <WinningScreen /> */}
        
 
     </View>
