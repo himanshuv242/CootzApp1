@@ -12,12 +12,12 @@ const Screen1 = () => {
     <View style={{ flex: 1 }}>
 
       <View style={{ flex: 1.3, alignItems: 'center', justifyContent: 'center' }}>
-        <Text style={{ fontSize: 25, color: 'white', textAlign: 'center', fontWeight: 'bold', marginBottom: 5 }}>Click On The Play Button</Text>
-        <Text style={{ fontSize: 13, color: 'white', textAlign: 'center', width: 300 }}>Tap on the play button for playing the game </Text>
-        <Text style={{ fontSize: 13, color: 'white', textAlign: 'center', width: 335 }}>you have selected</Text>
+        <Text style={{ fontSize: 25, color: 'white', textAlign: 'center', fontWeight: 'bold', marginBottom: 5 }}>Withdraw The Money</Text>
+        <Text style={{ fontSize: 13, color: 'white', textAlign: 'center', width: 300 }}>Withdraw the money you won to the wallet </Text>
+        <Text style={{ fontSize: 13, color: 'white', textAlign: 'center', width: 335 }}>and transfer it to your bank account.</Text>
       </View>
       <View style={{ flex: 4,marginLeft:-25,marginTop:-30 }}>
-        <ImageBackground source={require('./Howtoplay/Howtoplay2.png')}
+        <ImageBackground source={require('../../assets/HowtoplayImg/Howtoplay1.png')}
           style={{ height: 600, width: 520 }}
           resizeMode='stretch' />
       </View>
