@@ -17,7 +17,7 @@ const Screen1 = () => {
         <Text style={{ fontSize: 13, color: 'white', textAlign: 'center', width: 335 }}>and transfer it to your bank account.</Text>
       </View>
       <View style={{ flex: 4,marginLeft:-25,marginTop:-30 }}>
-        <ImageBackground source={require('./Howtoplay/Howtoplay4.png')}
+        <ImageBackground source={require('../../assets/HowtoplayImg/Howtoplay1.png')}
           style={{ height: 600, width: 520 }}
           resizeMode='stretch' />
       </View>

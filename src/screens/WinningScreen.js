@@ -5,13 +5,13 @@ const WinningScreen = () => {
   return (
     <View style={{ flex: 1, backgroundColor: '#4cd4ca', }}>
 
-      <ImageBackground source={require('./WinningImg/Confetti.png')}
+      <ImageBackground source={require('../assets/WinningImg/Confetti.png')}
         style={styles.bgImage}
         resizeMode='stretch' >
           <View style={{flex:1,alignItems:'center',justifyContent:'center'}}>
         <Text style={{  color: 'white', fontSize: 35, textAlign: 'center', fontWeight: 'bold',}}>CONGRATS</Text>
         </View>
-        <ImageBackground source={require('./WinningImg/WinningBox.png')}
+        <ImageBackground source={require('../assets/WinningImg/WinningBox.png')}
           style={{ height: 300, width: 500,flex:2.5,}}
           resizeMode='stretch' >
           <Text style={{ color: 'black', fontSize: 20, textAlign: 'center', fontWeight: 'bold',marginTop:100 ,width:100,marginLeft:120}}>You Won</Text>

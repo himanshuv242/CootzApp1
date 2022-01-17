@@ -19,7 +19,7 @@ const Screen1 = (props) => {
         <Text style={{ fontSize: 13, color: 'white', textAlign: 'center', width: 335 }}> the contest  cards displayed on the home screen</Text>
       </View>
       <View style={{ flex: 4,marginLeft:-25,marginTop:-30 }}>
-        <ImageBackground source={require('./Howtoplay/Howtoplay1.png')}
+        <ImageBackground source={require('../../assets/HowtoplayImg/Howtoplay1.png')}
           style={{ height: 600, width: 520 }}
           resizeMode='stretch' />
       </View>

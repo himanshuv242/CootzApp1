@@ -1,41 +1,33 @@
 import React, { useEffect } from 'react';
 import {
-  Button,
-  TouchableOpacity,
-  StyleSheet,
-  Text,
-  useColorScheme,
+ 
   View,
 } from 'react-native';
 import 'react-native-gesture-handler'
-import LinearGradient from 'react-native-linear-gradient'
-import Screen1 from './Components/HowToPlay/Screen1';
-import Screen2 from './Components/HowToPlay/Screen2';
-import Screen3 from './Components/HowToPlay/Screen3';
-import Screen4 from './Components/HowToPlay/Screen4';
-import Screen5 from './Components/HowToPlay/Screen5';
-import Page1 from './Components/Page1';
-import RegisterPage from './Components/RegisterPage';
-import SplashScreen from './Components/SplashScreen';
-import WinningScreen from './Components/WinningScreen';
-import { NavigationContainer, StackActions } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import IndexScreen from './src/screens/HowToPlay/IndexScreen';
+
 
 
 
 
 const App = (props) => {
-  const Stack=createStackNavigator();
   return (
     <View style={{ flex: 1 }}>
+      <IndexScreen />
+
+
+
+
+
+
       {/* <Drawer /> */}
-      <NavigationContainer>
+      {/* <NavigationContainer>
       <LinearGradient
         colors={['#0A2133', '#4cd4ca']} style={{ flex: 1, alignItems: 'center', flexDirection: 'row', justifyContent: 'center' }}>
         <Stack.Navigator initialRouteName='Screen1'>
           <Stack.Screen name='Screen1' component={Screen1} />
           <Stack.Screen name='Screen2' component={Screen2} />
-        </Stack.Navigator>
+        </Stack.Navigator> */}
 
       {/* <Screen1 /> */}
       {/* <Button title='Go to How to Play Screens' onPress={()=>{props.navigator.navigate}} /> */}
@@ -44,12 +36,11 @@ const App = (props) => {
       {/* <Screen4 /> */}
       {/* <SplashScreen /> */}
       {/* <Page1 /> */}
-      </LinearGradient>
+      {/* </LinearGradient> */}
       {/* <Screen5 /> */}
       {/* <RegisterPage/> */}
         
      {/* <WinningScreen /> */}
-     </NavigationContainer>
        
 
     </View>
@@ -57,57 +48,57 @@ const App = (props) => {
 
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#0A2133'
-  },
-  textSign: {
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     backgroundColor: '#0A2133'
+//   },
+//   textSign: {
 
-    fontSize: 18,
-    fontWeight: 'bold',
-  },
-  button: {
-    alignItems: 'center',
-    marginTop: 50,
-  },
-  signIn: {
-    width: '100%',
-    height: 50,
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 10,
-  },
-  colors: {
-    // width: '100%',
-    // height: 50,
-    width: 500,
+//     fontSize: 18,
+//     fontWeight: 'bold',
+//   },
+//   button: {
+//     alignItems: 'center',
+//     marginTop: 50,
+//   },
+//   signIn: {
+//     width: '100%',
+//     height: 50,
+//     justifyContent: 'center',
+//     alignItems: 'center',
+//     borderRadius: 10,
+//   },
+//   colors: {
+//     // width: '100%',
+//     // height: 50,
+//     width: 500,
 
-  },
-  bottom: {
-    MarginTop: 700,
-    marginLeft: 400,
-  },
-  diagonalLine: {
-    marginLeft: -30,
-    position: 'absolute',
-    transform: [{ rotate: '25deg' }],
-    top: 300,
-    width: 450,
-    height: 40,
-    backgroundColor: '#4cd4ca'
-  },
-  diagonalLine2: {
-    marginLeft: -25,
-    position: 'absolute',
-    transform: [{ rotate: '-25deg' }],
-    top: 300,
-    width: 450,
-    height: 40,
-    backgroundColor: '#4cd4ca'
-  }
+//   },
+//   bottom: {
+//     MarginTop: 700,
+//     marginLeft: 400,
+//   },
+//   diagonalLine: {
+//     marginLeft: -30,
+//     position: 'absolute',
+//     transform: [{ rotate: '25deg' }],
+//     top: 300,
+//     width: 450,
+//     height: 40,
+//     backgroundColor: '#4cd4ca'
+//   },
+//   diagonalLine2: {
+//     marginLeft: -25,
+//     position: 'absolute',
+//     transform: [{ rotate: '-25deg' }],
+//     top: 300,
+//     width: 450,
+//     height: 40,
+//     backgroundColor: '#4cd4ca'
+//   }
 
-});
+// });
 
 export default App;
 
