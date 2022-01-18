@@ -20,7 +20,7 @@ const styles=StyleSheet.create({
   },
   image:{
     flex:0.7,
-    justifyContent:'center'
+    justifyContent:'center',
   },
   title:{
     flex:0.06,

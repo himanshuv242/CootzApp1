@@ -15,12 +15,6 @@ const App = (props) => {
     <View style={{ flex: 1 }}>
       <IndexScreen />
 
-
-
-
-
-
-      {/* <Drawer /> */}
       {/* <NavigationContainer>
       <LinearGradient
         colors={['#0A2133', '#4cd4ca']} style={{ flex: 1, alignItems: 'center', flexDirection: 'row', justifyContent: 'center' }}>
@@ -29,18 +23,9 @@ const App = (props) => {
           <Stack.Screen name='Screen2' component={Screen2} />
         </Stack.Navigator> */}
 
-      {/* <Screen1 /> */}
       {/* <Button title='Go to How to Play Screens' onPress={()=>{props.navigator.navigate}} /> */}
-      {/* <Screen2 /> */}
-      {/* <Screen3 /> */}
-      {/* <Screen4 /> */}
-      {/* <SplashScreen /> */}
-      {/* <Page1 /> */}
       {/* </LinearGradient> */}
-      {/* <Screen5 /> */}
-      {/* <RegisterPage/> */}
         
-     {/* <WinningScreen /> */}
        
 
     </View>
