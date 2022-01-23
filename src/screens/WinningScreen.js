@@ -3,7 +3,7 @@ import { View, Text, ImageBackground, StyleSheet } from 'react-native'
 
 const WinningScreen = () => {
   return (
-    <View style={{ flex: 1, backgroundColor: '#4cd4ca', }}>
+    <View style={{ flex: 1, backgroundColor: '#027d81', }}>
 
       <ImageBackground source={require('../assets/WinningImg/Confetti.png')}
         style={styles.bgImage}
