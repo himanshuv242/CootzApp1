@@ -11,6 +11,7 @@ import 'react-native-gesture-handler'
 import WinningScreen from './src/screens/WinningScreen';
 import Home from './src/screens/Home/Home';
 import Funds from './src/screens/Funds/Funds';
+import ChooseUpiFlatList from './src/screens/Funds/ChooseUpiFlatlist';
 
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';

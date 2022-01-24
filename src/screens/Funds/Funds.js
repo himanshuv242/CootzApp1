@@ -1,3 +1,4 @@
+import React from "react";
 import { View, Text, FlatList, Image } from "react-native";
 import LinearGradient from "react-native-linear-gradient";
 
@@ -30,7 +31,7 @@ export default function Funds() {
           marginLeft: "5%",
           marginBottom: 43,
           fontSize: 16,
-          fontWeight: 600,
+          fontWeight: '600',
           color: "white",
         }}
       >
@@ -71,7 +72,7 @@ export default function Funds() {
                     style={{
                       margin: "auto",
                       color: "#FEFEFE",
-                      fontWeight: 600,
+                      fontWeight: '600',
                       fontSize: 16,
                     }}
                   >
@@ -81,7 +82,7 @@ export default function Funds() {
                     style={{
                       margin: "auto",
                       color: "#FFFFFF",
-                      fontWeight: 600,
+                      fontWeight: '600',
                       fontSize: 24,
                       marginTop: -35,
                     }}
@@ -103,7 +104,7 @@ export default function Funds() {
                   style={{
                     width: 30,
                     height: 30,
-                    borderRadius: "50%",
+                    borderRadius: 10,
                     backgroundColor: "lightgray",
                     margin: "auto",
                     position: "absolute",
@@ -112,7 +113,7 @@ export default function Funds() {
                   }}
                 >
                   <Image
-                    source={require("../assets/Funds/Vector.png")}
+                    source={require("../../assets/Funds/Vector.png")}
                     style={{
                       width: 17,
                       height: 15,
@@ -152,12 +153,12 @@ export default function Funds() {
         }}
       >
         <Image
-          source={require("../assets/Funds/transaction.png")}
+          source={require("../../assets/Funds/transaction.png")}
           style={{ width: 25, height: 25, margin: 22, marginLeft: 30 }}
         />
         <Text
           style={{
-            fontWeight: 600,
+            fontWeight: '600',
             fontSize: 16,
             marginLeft: 75,
             marginTop: -45,
@@ -166,7 +167,7 @@ export default function Funds() {
           UPI ID’s
         </Text>
         <Image
-          source={require("../assets/Funds/angle-arrow.png")}
+          source={require("../../assets/Funds/angle-arrow.png")}
           style={{
             width: 10,
             height: 15,

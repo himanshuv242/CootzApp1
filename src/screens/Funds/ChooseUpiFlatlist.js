@@ -11,10 +11,7 @@ const ChooseUpiFlatList = ({navigation}) => {
     const upi= [
         {company:'Paytm',id:'rahul.paytm@okaxis',key:'1'},
         {company:'G-Pay',id:'himanshuv242@okaxis',key:'2'},
-        // {company:'Upi',id:'aseem@okaxis',key:'3'},
-        // {company:'Bhim',id:'hieee@okaxis',key:'4'},
-        // {company:'Amazon',id:'aseem@okaxis',key:'5'},
-        // {company:'Phone-Pe',id:'hello@okaxis',key:'6'},
+       
     ]
 
   const [modalOpen, setModalOpen] = useState(false);

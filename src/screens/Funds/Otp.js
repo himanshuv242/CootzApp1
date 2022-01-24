@@ -30,20 +30,20 @@ const Otp = () => {
   });
   
   return (
-    <View style={{flex: 1}}>
+    <View style={{flex: 1,}}>
       <LinearGradient
         style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}
         colors={['#194954', '#000000']}>
-        <View style={{flex: 1}}>
+        <View style={{flex: 1,backgroundColor:'red'}}>
           <View
-            style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+            style={{flex: 1,backgroundColor:'red', alignItems: 'center', justifyContent: 'center'}}>
             <Animated.Image
               source={require('../assets/OTP/OTP.png')}
               style={{height: 90, width: 90, transform: [{rotate:spin}]}}
             />
           </View>
           <View
-            style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+            style={{flex: 1,backgroundColor:'red', alignItems: 'center', justifyContent: 'center'}}>
             <Text
               style={{
                 fontSize: 25,
@@ -51,6 +51,7 @@ const Otp = () => {
                 width: 400,
                 fontWeight: 'bold',
                 textAlign: 'center',
+                backgroundColor:'red'
               }}>
               Enter the code sent to your
             </Text>
