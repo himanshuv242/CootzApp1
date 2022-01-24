@@ -7,19 +7,15 @@ import {
   Image
 } from 'react-native';
 import 'react-native-gesture-handler'
-import IndexScreen from './src/screens/HowToPlay/IndexScreen';
+
 import WinningScreen from './src/screens/WinningScreen';
-import Winners from './src/screens/Winners';
-import Info from './src/screens/Home/Info';
+import Home from './src/screens/Home/Home';
+import Funds from './src/screens/Funds/Funds';
+
+
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
-import Home from './src/screens/Home/Home';
 import {RFValue} from 'react-native-responsive-fontsize';
-import Icon4 from 'react-native-vector-icons/FontAwesome5';
-
-// import { createDrawerNavigator } from '@react-navigation/drawer';
-
-// const Drawer = createDrawerNavigator();
 import { Dimensions, PixelRatio } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
@@ -109,9 +105,10 @@ const App = () => {
           };
         }}
       />
+      
       <Tab.Screen
         name="Funds"
-        component={WinningScreen}
+        component={Funds}
         options={({navigation}) => {
           return {
             tabBarStyle: {
