@@ -151,6 +151,3 @@ const App = () => {
 };
 
 export default App;
-
-// to link icons
-// npx react-native link react-native-vector-icons 

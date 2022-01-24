@@ -1,6 +1,5 @@
 import React from 'react'
 import { View, Text,Image } from 'react-native'
-import Winners from '../Winners';
 import Info from './Info';
 import Trending from './Trending';
 
