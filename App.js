@@ -44,18 +44,37 @@ const App = () => {
       } }
        >
       <Tab.Screen
-        name="Home"
-        component={Home}
-        options={{
-          tabBarIcon: ({ focused }) => (
-            <Icon4
-            name="home"
-            size={focused ? 27 : 24}
-            style={{color: focused ? '#4cd4ca' : 'white'}}></Icon4>
-           
-          )
-        }}
-            
+         name="Home"
+         component={Home}
+         options={({navigation}) => {
+           return {
+             tabBarStyle: {
+               height: dimension.height * 0.07,
+               alignItems: 'center',
+               alignContent: 'center',
+               justifyContent: 'center',
+               backgroundColor: '#082032',
+             },
+ 
+             headerShown: false,
+             tabBarLabel: ({focused}) => (
+               <Text
+                 style={{
+                   color: focused ? '#4cd4ca' : 'white',
+                   fontSize: RFValue(10),
+                 }}>
+                 Home
+               </Text>
+             ),
+             tabBarIcon: ({focused}) => (
+               <Icon
+                 name="home-filled"
+                 size={focused ? 27 : 24}
+                 style={{color: focused ? '#4cd4ca' : 'white'}}
+               />
+             ),
+           };
+         }} 
       />
       <Tab.Screen
         name="Winners"
@@ -82,7 +101,7 @@ const App = () => {
             ),
             tabBarIcon: ({focused}) => (
               <Icon
-                name="home-filled"
+                name="emoji-events"
                 size={focused ? 27 : 24}
                 style={{color: focused ? '#4cd4ca' : 'white'}}
               />
@@ -115,7 +134,7 @@ const App = () => {
             ),
             tabBarIcon: ({focused}) => (
               <Icon
-                name="home-filled"
+                name="trending-up"
                 size={focused ? 27 : 24}
                 style={{color: focused ? '#4cd4ca' : 'white'}}
               />
@@ -131,56 +150,7 @@ const App = () => {
 
 };
 
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: '#0A2133'
-//   },
-//   textSign: {
-
-//     fontSize: 18,
-//     fontWeight: 'bold',
-//   },
-//   button: {
-//     alignItems: 'center',
-//     marginTop: 50,
-//   },
-//   signIn: {
-//     width: '100%',
-//     height: 50,
-//     justifyContent: 'center',
-//     alignItems: 'center',
-//     borderRadius: 10,
-//   },
-//   colors: {
-//     // width: '100%',
-//     // height: 50,
-//     width: 500,
-
-//   },
-//   bottom: {
-//     MarginTop: 700,
-//     marginLeft: 400,
-//   },
-//   diagonalLine: {
-//     marginLeft: -30,
-//     position: 'absolute',
-//     transform: [{ rotate: '25deg' }],
-//     top: 300,
-//     width: 450,
-//     height: 40,
-//     backgroundColor: '#4cd4ca'
-//   },
-//   diagonalLine2: {
-//     marginLeft: -25,
-//     position: 'absolute',
-//     transform: [{ rotate: '-25deg' }],
-//     top: 300,
-//     width: 450,
-//     height: 40,
-//     backgroundColor: '#4cd4ca'
-//   }
-
-// });
-
 export default App;
+
+// to link icons
+// npx react-native link react-native-vector-icons 

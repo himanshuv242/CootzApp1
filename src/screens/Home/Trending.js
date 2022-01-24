@@ -3,6 +3,7 @@ import { View, Text, Modal, Image, Button , TouchableOpacity} from 'react-native
 import { ScrollView, TouchableHighlight } from 'react-native-gesture-handler'
 import LinearGradient from 'react-native-linear-gradient'
 import ContestsData from './ContestsData'
+import Icon from 'react-native-vector-icons/Ionicons';
 
 const Trending = () => {
   const [show, setShow] = useState(false);
@@ -81,7 +82,9 @@ const Trending = () => {
 
               <View style={{ flex: 1, backgroundColor: 'white', marginBottom: 15, width: 350, borderRadius: 10 }}>
                 <View style={{ flex: 1, flexDirection: 'row', alignItems: 'flex-start', padding: 6 }}>
-                  <Text style={{ marginRight: 20, fontWeight: 'bold', color: 'black', fontSize: 15 }}>Icon</Text>
+                  {/* <Text style={{ marginRight: 20, fontWeight: 'bold', color: 'black', fontSize: 15 }}>Icon</Text> */}
+                  <Icon name="trending-up" color="black" size={25} style={{marginRight:5}} />
+                  <Icon name="add-circle-outline" color="black" size={25} style={{marginRight:5}}/>
                   <Text style={{ marginRight: 20, fontWeight: 'bold', color: 'black', fontSize: 15 }}>{element.Name}</Text>
                   <View >
                     <Text style={{ marginRight: 20, fontWeight: 'bold', color: 'black', fontSize: 15 }}>{element.Time}</Text>
@@ -90,8 +93,8 @@ const Trending = () => {
                 </View>
                 <View style={{ backgroundColor: '#dddddd', height: 45, borderBottomRightRadius: 10, borderBottomStartRadius: 10, }}>
                   <View style={{ flexDirection: 'row', marginHorizontal: 12, justifyContent: 'space-between', }}>
-                    <Text style={{ color: 'black', }}>{element.SlotsLeft} Slots Left</Text>
-                    <Text style={{ color: 'black' }}>{element.TotalSlot} Slots</Text>
+                    <Text style={{ color: 'black',fontWeight:'bold' }}>{element.SlotsLeft} Slots Left</Text>
+                    <Text style={{ color: 'black',fontWeight:'bold'  }}>{element.TotalSlot} Slots</Text>
                   </View>
                   <View style={{ flexDirection: 'row', backgroundColor: 'white', height: 8, marginTop: 10, width: 350, }}>
                     <View style={{ backgroundColor: 'black', height: 8, width: slotbar, borderTopRightRadius: 5, borderBottomRightRadius: 5 }}></View>
