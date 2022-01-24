@@ -2,7 +2,7 @@ import React from 'react';
 import {View, Text, TouchableOpacity,TextInput} from 'react-native';
 
 
-const AddNewUPI = () => {
+const AddNewUPI = ({navigation}) => {
   return (
     <View style={{flex: 1, backgroundColor: '#247174'}}>
       <View style={{flex: 0.8}}>
@@ -75,7 +75,12 @@ const AddNewUPI = () => {
               borderColor: 'white',
               backgroundColor: 'white',
             }}
-            onPress={() => alert('Saving your UPI')}>
+            onPress={() => 
+            {
+              alert('Saving your UPI');
+              
+              navigation.navigate('ChooseUPI');
+            }}>
             <Text style={{fontSize: 15, color: 'black', fontWeight: 'bold'}}>
               SAVE
             </Text>

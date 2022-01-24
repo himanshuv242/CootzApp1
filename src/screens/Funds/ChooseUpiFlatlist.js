@@ -3,15 +3,12 @@ import {View, Text, TouchableOpacity, Modal, FlatList} from 'react-native';
 import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
 import LinearGradient from 'react-native-linear-gradient';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 const ChooseUpiFlatList = ({navigation}) => {
 
     const upi= [
         {company:'Paytm',id:'rahul.paytm@okaxis',key:'1'},
         {company:'G-Pay',id:'himanshuv242@okaxis',key:'2'},
-       
     ]
 
   const [modalOpen, setModalOpen] = useState(false);
@@ -246,33 +243,7 @@ const ChooseUpiFlatList = ({navigation}) => {
         </View>
         {/* Add new UPI Button */}
 
-        {/* <View
-          style={{
-              flex: 1,
-            alignItems: 'center',
-            justifyContent: 'center',
-            backgroundColor: ''
-          }}>
-          <TouchableOpacity
-            style={{
-              alignItems: 'center',
-              justifyContent: 'center',
-              borderStyle: 'dashed',
-              borderWidth: 2,
-              width: 350,
-              borderRadius: 13,
-              height: 60,
-              borderColor: 'white',
-            }}
-            animationType={'slide'}
-            onPress={() => navigation.navigate('AddUPI')}>
-            <Text style={{fontSize: 15, color: 'white', fontWeight: 'bold'}}>
-              Add new UPI
-            </Text>
-          </TouchableOpacity>
-        </View> */}
-      
-
+        
       {/* Withdraw button for bottom */}
       <View style={{flex: 0.8,}}>
         <View
