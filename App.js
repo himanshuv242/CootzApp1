@@ -54,7 +54,6 @@ const App = () => {
                   justifyContent: 'center',
                   backgroundColor: '#082032',
                 },
-
                 headerShown: false,
                 tabBarLabel: ({ focused }) => (
                   <Text
