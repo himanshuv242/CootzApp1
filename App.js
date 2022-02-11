@@ -1,102 +1,152 @@
 import React, { useEffect } from 'react';
 import {
-  Button,
+  SafeAreaView,
   TouchableOpacity,
-  StyleSheet,
-  Text,
-  useColorScheme,
   View,
+  Text,
+  Image
 } from 'react-native';
-import LinearGradient from 'react-native-linear-gradient'
-import Screen1 from './Components/HowToPlay/Screen1';
-import Screen2 from './Components/HowToPlay/Screen2';
-import Screen3 from './Components/HowToPlay/Screen3';
-import Screen4 from './Components/HowToPlay/Screen4';
-import Screen5 from './Components/HowToPlay/Screen5';
-import Page1 from './Components/Page1';
-import RegisterPage from './Components/RegisterPage';
-import SplashScreen from './Components/SplashScreen';
-import WinningScreen from './Components/WinningScreen';
+import 'react-native-gesture-handler'
+
+import WinningScreen from './src/screens/WinningScreen';
+import Home from './src/screens/Home/Home';
+import Funds from './src/screens/Funds/Funds';
+import ChooseUpiFlatList from './src/screens/Funds/ChooseUpiFlatlist';
+import AddNewUPI  from './src/screens/Funds/AddNewUPI';
+
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { NavigationContainer } from '@react-navigation/native';
+import { RFValue } from 'react-native-responsive-fontsize';
+import { Dimensions, PixelRatio } from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialIcons';
+import UpiScreen from './src/screens/Funds/UpiScreen';
 
 
+const dimension = Dimensions.get('screen');
+const Tab = createBottomTabNavigator();
 
 
 const App = () => {
-
   return (
-    <View style={{ flex: 1 }}>
-      {/* <Drawer /> */}
-      {/* <LinearGradient
-        colors={['#0A2133', '#4cd4ca']} style={{ flex: 1, alignItems: 'center', flexDirection: 'row', justifyContent: 'center' }}> */}
+    
+       <NavigationContainer>
+        <Tab.Navigator screenOptions={{
+          headerShown: false,
+          tabBarLabelStyle: {
+            fontSize: 14,
+            color: '#fff',
+            fontFamily: 'Poppins-Medium',
+            fontWeight: '800',
+          },
+          tabBarStyle: { backgroundColor: '#082032', },
+          tabBarItemStyle: { height: 40 },
+        }}
+        >
+          <Tab.Screen
+            name="Home"
+            component={Home}
+            options={({ navigation }) => {
+              return {
+                tabBarStyle: {
+                  height: dimension.height * 0.07,
+                  alignItems: 'center',
+                  alignContent: 'center',
+                  justifyContent: 'center',
+                  backgroundColor: '#082032',
+                },
+                headerShown: false,
+                tabBarLabel: ({ focused }) => (
+                  <Text
+                    style={{
+                      color: focused ? '#4cd4ca' : 'white',
+                      fontSize: RFValue(10),
+                    }}>
+                    Home
+                  </Text>
+                ),
+                tabBarIcon: ({ focused }) => (
+                  <Icon
+                    name="home-filled"
+                    size={focused ? 27 : 24}
+                    style={{ color: focused ? '#4cd4ca' : 'white' }}
+                  />
+                ),
+              };
+            }}
+          />
+          <Tab.Screen
+            name="Winners"
+            component={WinningScreen}
+            options={({ navigation }) => {
+              return {
+                tabBarStyle: {
+                  height: dimension.height * 0.07,
+                  alignItems: 'center',
+                  alignContent: 'center',
+                  justifyContent: 'center',
+                  backgroundColor: '#082032',
+                },
 
-      {/* <Screen1 /> */}
-      {/* <Screen2 /> */}
-      {/* <Screen3 /> */}
-      {/* <Screen4 /> */}
-      {/* <SplashScreen /> */}
-      {/* <Page1 /> */}
-      {/* </LinearGradient> */}
-      {/* <Screen5 /> */}
-      {/* <RegisterPage/> */}
-        
-     <WinningScreen />
-       
+                headerShown: false,
+                tabBarLabel: ({ focused }) => (
+                  <Text
+                    style={{
+                      color: focused ? '#4cd4ca' : 'white',
+                      fontSize: RFValue(10),
+                    }}>
+                    Winners
+                  </Text>
+                ),
+                tabBarIcon: ({ focused }) => (
+                  <Icon
+                    name="emoji-events"
+                    size={focused ? 27 : 24}
+                    style={{ color: focused ? '#4cd4ca' : 'white' }}
+                  />
+                ),
+              };
+            }}
+          />
 
-    </View>
+          <Tab.Screen
+            name="Funds"
+            component={UpiScreen}
+            options={({ navigation }) => {
+              return {
+                tabBarStyle: {
+                  height: dimension.height * 0.07,
+                  alignItems: 'center',
+                  alignContent: 'center',
+                  justifyContent: 'center',
+                  backgroundColor: '#082032',
+                },
+
+                headerShown: false,
+                tabBarLabel: ({ focused }) => (
+                  <Text
+                    style={{
+                      color: focused ? '#4cd4ca' : 'white',
+                      fontSize: RFValue(10),
+                    }}>
+                    Funds
+                  </Text>
+                ),
+                tabBarIcon: ({ focused }) => (
+                  <Icon
+                    name="trending-up"
+                    size={focused ? 27 : 24}
+                    style={{ color: focused ? '#4cd4ca' : 'white' }}
+                  />
+                ),
+              };
+            }}
+          />
+
+
+        </Tab.Navigator>
+    </NavigationContainer>
   )
 
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#0A2133'
-  },
-  textSign: {
-
-    fontSize: 18,
-    fontWeight: 'bold',
-  },
-  button: {
-    alignItems: 'center',
-    marginTop: 50,
-  },
-  signIn: {
-    width: '100%',
-    height: 50,
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 10,
-  },
-  colors: {
-    // width: '100%',
-    // height: 50,
-    width: 500,
-
-  },
-  bottom: {
-    MarginTop: 700,
-    marginLeft: 400,
-  },
-  diagonalLine: {
-    marginLeft: -30,
-    position: 'absolute',
-    transform: [{ rotate: '25deg' }],
-    top: 300,
-    width: 450,
-    height: 40,
-    backgroundColor: '#4cd4ca'
-  },
-  diagonalLine2: {
-    marginLeft: -25,
-    position: 'absolute',
-    transform: [{ rotate: '-25deg' }],
-    top: 300,
-    width: 450,
-    height: 40,
-    backgroundColor: '#4cd4ca'
-  }
-
-});
 
 export default App;
